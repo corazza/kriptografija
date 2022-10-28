@@ -1,18 +1,4 @@
-from curses.ascii import isupper
-
-
-Z = 26
-
-
-def to_z(c: str) -> int:
-    if isupper(c):
-        return ord(c) - ord('A')
-    else:
-        return ord(c) - ord('a')
-
-
-def from_z(c: int) -> str:
-    return chr(c + ord('A'))
+from util import *
 
 
 def _e(k: int, c: int) -> int:
@@ -24,17 +10,11 @@ def _d(k: int, c: int) -> int:
 
 
 def e(k: int, plaintext: str) -> str:
-    in_z = map(to_z, plaintext)
-    ciphertext = map(lambda c: _e(k, c), in_z)
-    in_latin = map(from_z, ciphertext)
-    return ''.join(in_latin)
+    return gen_e(plaintext, lambda c: _e(k, c))
 
 
 def d(k: int, ciphertext: str) -> str:
-    in_z = map(to_z, ciphertext)
-    plaintext = map(lambda c: _d(k, c), in_z)
-    in_latin = map(from_z, plaintext)
-    return ''.join(in_latin)
+    return gen_d(ciphertext, lambda c: _d(k, c))
 
 
 def break_cipher(ciphertext: str) -> str:
