@@ -10,11 +10,11 @@ def _d(k: int, c: int) -> int:
 
 
 def e(k: int, plaintext: str) -> str:
-    return gen_e(plaintext, lambda c: _e(k, c))
+    return applier(plaintext, lambda c: _e(k, c))
 
 
 def d(k: int, ciphertext: str) -> str:
-    return gen_d(ciphertext, lambda c: _d(k, c))
+    return applier(ciphertext, lambda c: _d(k, c))
 
 
 def break_cipher(ciphertext: str) -> str:
