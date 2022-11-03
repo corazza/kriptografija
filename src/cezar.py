@@ -19,4 +19,5 @@ def d(k: int, ciphertext: str) -> str:
 
 def break_cipher(ciphertext: str) -> str:
     for k in range(1, Z):
-        print(d(k, ciphertext), k)
+        plaintext = d(k, ciphertext)
+        print(f'{k} => {plaintext}')
