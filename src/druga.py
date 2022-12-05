@@ -87,11 +87,23 @@ def prvi():
     print(m)
     print(z_to_str(kljuc))
     print(z_to_str(d(cipher_z, kljuc)))
-    IPython.embed()
+
+
+def drugi():
+    """PO GY MD ZK HO OH EM"""
+    pass
+
+
+def treci():
+    """kvadrat(5, 9, 11, 15)"""
+    print(str_to_z('VERNAM'))
+    print(str_to_z('TNUXCS'))
 
 
 def main():
     prvi()
+    drugi()
+    treci()
 
 
 if __name__ == "__main__":
