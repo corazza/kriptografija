@@ -57,7 +57,7 @@ def _n_most_frequent(n: int, length: int, in_z: list[int]) -> list[int]:
 
 
 def n_most_frequent(n: int, length: int, plaintext: str) -> list[str]:
-    in_z = filter_whitespace(str_to_z(plaintext))
+    in_z = str_to_z(plaintext)
     most_frequent = _n_most_frequent(n, length, in_z)
     return [[''.join(z_to_str(zs)) for zs in zss] for zss in most_frequent]
 

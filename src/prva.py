@@ -61,14 +61,17 @@ KXFUD CPBQH UOFUD HCQBQ AUHUT QFOCK UGXCG CSUHC
 UGHQO QCWXO FUDHU FQBKX RGUYF UFQBU VGDQB KCAGO
 UVDCF IOQ"""
 
-    gradovi = ['vukovar', 'dubrovnik']
+    cipher2 = """WKZTS KZQYU MAZAU ZPZVD TQMAO ZUENK EAUVD FVDAQ
+ZAFVD ZRNVA CENUV RLMKD TAMFM ODTNV BZMBW MPTCA
+UZYAZ WMKMK ZDTAZ VDTNK VPBTR UVDZD TUKZN CVMOM
+BZCZQ MKTRE QZVFZ ATVSC KZACV XVSZO M"""
 
-    pts = []
+    gradovi = ['vukovar', 'dubrovnik']  # hint
 
     for grad in gradovi:
         for i in range(Z):
             p = cezarova_kljucna.get_permutation(grad, i)
-            plaintext = cezarova_kljucna.apply_permutation(cipher, p)
+            plaintext = cezarova_kljucna.apply_permutation(cipher2, p)
             if 'JE' in plaintext.replace(' ', ''):
                 print(f'({grad}, {i}) => {plaintext}')
 
