@@ -95,7 +95,7 @@ def drugi():
 
 
 def treci():
-    """kvadrat(5, 9, 11, 15)"""
+    """kvadratna(5, 9, 11, 15)"""
     print(str_to_z('VERNAM'))
     print(str_to_z('TNUXCS'))
 
